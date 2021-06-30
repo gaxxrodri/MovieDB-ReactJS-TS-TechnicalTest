@@ -1,1 +1,0 @@
-# BeMobile-TechnicalTest-priv
