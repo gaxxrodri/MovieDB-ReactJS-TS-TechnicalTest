@@ -1,11 +1,12 @@
-export default function printMovies(array:any):any {
-    if(array[0] !== undefined) {
-      return array[0].map((movie:any) => {
-          return (
-            <li key={movie.id}>
-              {movie.title}
-            </li>
-          );
-      });
-    };
+import { Movie } from "../common/interfaces";
+
+  export default function printMovies(array:Movie[]): JSX.Element[] { 
+     return (  array.map( ({id, title}:Movie) => {
+        return (
+          <li key={id} > 
+            {title}
+          </li>
+        );
+      })
+    )
   };
