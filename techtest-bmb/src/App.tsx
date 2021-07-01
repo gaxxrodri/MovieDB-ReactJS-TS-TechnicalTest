@@ -19,6 +19,7 @@ function App() {
             <Link to="/">MoviesList</Link>
             <Link to="/404">404</Link>
           </nav>
+          
           <Switch>
             <Route path="/" exact component={MoviesList} />
             <Route path="/details:/movie" component={MovieDetails} />

@@ -1,18 +1,18 @@
 import axios from "axios";
-import { Api } from "../common/types";
+import { Api, ApiResponse } from '../common/types';
 
 
 const URL = process.env.REACT_APP_URL;
-console.log(URL)
+const API = process.env.REACT_APP_KEY;
+const url_endpoint = `${URL}?api_key=${API}`;
 
 
 export const api:Api = {
     movies: {
         async fetch(){
             try {
-                const response = await axios.get<any>('url');
-                return response.data;
-                
+                const {data} = await axios.get<ApiResponse>(url_endpoint);
+                return data.results
             } catch (error) {
                 console.error(error);
             }
