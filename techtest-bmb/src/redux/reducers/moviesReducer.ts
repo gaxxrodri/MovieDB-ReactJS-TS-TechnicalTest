@@ -6,8 +6,7 @@ function moviesReducer(movies=[], action:MovieActions) {
 
   switch (action.type) {
     case actionTypes.LOAD_MOVIES:
-      updateMovies = [...movies, 
-        action.movies]
+      updateMovies = [action.movies]
       break;
     default:
         break;
