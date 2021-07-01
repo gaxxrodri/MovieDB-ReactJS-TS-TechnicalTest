@@ -1,12 +1,12 @@
-import { Movie, MovieActions } from '../../common/types';
+import { Movie, MovieActions } from '../../common/interfaces';
 import actionTypes from '../actions/actionTypes';
 
 function moviesReducer(movies=[], action:MovieActions) {
-    let updateMovies:Movie[] =[...movies];
-
+  let updateMovies:Movie[] | any =[...movies];    //----TODO
+  
   switch (action.type) {
     case actionTypes.LOAD_MOVIES:
-      updateMovies = [action.movies]
+      updateMovies = action.movies
       break;
     default:
         break;

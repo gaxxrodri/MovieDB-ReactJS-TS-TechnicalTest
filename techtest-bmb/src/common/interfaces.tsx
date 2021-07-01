@@ -1,39 +1,37 @@
-import { compose } from "redux";
-
 export type Api = {
     movies:{
-        fetch(): Promise<any>   //TODO THIS
+        fetch(): Promise<ApiMovieResponse>
     }
 };
 
 export type MovieActions = {
-    type: 'LOAD_MOVIES';
+    type: string;
     movies:Movie;
 }
 
 
-export type ApiResponse = {
+export interface ApiMovieResponse {
     page: number;
     results: Movie[];
     total_pages: number;
     total_results: number;
 }
 
-export type Movie = {
+export interface Movie {
+    adult: boolean;
+    backdrop_path: string;
+    genre_ids: number[];
+    id: number;
     original_language: OriginalLanguage;
     original_title: string;
     poster_path: string;
+    popularity: number;
+    overview: string;
+    title: string;
+    release_date: Date;
     video: boolean;
     vote_average: number;
-    overview: string;
-    id: number;
     vote_count: number;
-    adult: boolean;
-    backdrop_path: string;
-    title: string;
-    genre_ids: number[];
-    release_date: Date;
-    popularity: number;
     media_type: MediaType;
 };
 
@@ -46,8 +44,4 @@ export enum MediaType {
     Movie = "movie",
 };
 
-declare global {
-    interface Window {
-      __REDUX_DEVTOOLS_EXTENSION_COMPOSE__?: typeof compose;
-    }
-  }
+
