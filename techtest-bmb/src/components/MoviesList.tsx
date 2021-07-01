@@ -1,16 +1,18 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect } from 'react';
-import { connect, useDispatch } from 'react-redux';
+import { connect, useDispatch, useSelector } from 'react-redux';
 import printImg from '../helpers/printImg';
 import printMovies from '../helpers/printMovies';
-import { Movie } from '../common/types';
+// import { Movie } from '../common/interfaces';
 import { loadMovies } from '../redux/actions/actionCreators';
+import { AppState } from '../redux/reducers';
 
 
-const MoviesList = ({movies}:any) => {
+const MoviesList = () => {
+  const movies = useSelector((store: AppState) => store.movies)
   const dispatch = useDispatch();
-    
+
   useEffect(() => {
       dispatch(loadMovies());
     }, []);
@@ -27,10 +29,11 @@ const MoviesList = ({movies}:any) => {
 };
 
 
-function mapStateToProps(store:any) {
-    return {
-      movies: store.movies,
-    };
-  };
+// function mapStateToProps(store:any) {
+//     return {
+//       movies: store.movies,
+//     };
+//   };
   
-export default connect(mapStateToProps)(MoviesList);
+export default MoviesList;
+// export default connect(mapStateToProps)(MoviesList);
