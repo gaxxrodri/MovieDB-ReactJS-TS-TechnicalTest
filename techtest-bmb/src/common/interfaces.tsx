@@ -9,7 +9,6 @@ export type MovieActions = {
     movies:Movie;
 }
 
-
 export interface ApiMovieResponse {
     page: number;
     results: Movie[];
@@ -33,15 +32,13 @@ export interface Movie {
     vote_average: number;
     vote_count: number;
     media_type: MediaType;
-};
+}
 
 export enum OriginalLanguage {
-    En = "en",
-    Ja = "ja",
-};
+    En = 'en',
+    Ja = 'ja',
+}
 
 export enum MediaType {
-    Movie = "movie",
-};
-
-
+    Movie = 'movie',
+}
