@@ -1,5 +1,5 @@
 import { Dispatch } from 'redux';
-import { Movie } from '../../common/interfaces';
+import { Movie } from '../../common/MovieInterfaces';
 import api from '../../services/api';
 import actionTypes from './actionTypes';
 
@@ -30,4 +30,20 @@ export const getMovieById = (SelectedMovieId:number, movies:Movie[]) => (dispatc
       type: actionTypes.LOAD_MOVIES_ERROR,
     });
   }
-}
+};
+
+export const loadTvShows = () => async (dispatch: Dispatch) => {
+  const tvShows = await api.tvShows.fetch();
+
+  try {
+    dispatch({
+      type: actionTypes.LOAD_TVSHOWS,
+      tvShows,
+    });
+  } catch (error) {
+    dispatch({
+      type: actionTypes.LOAD_TVSHOWS_ERROR,
+    });
+  }
+};
+
