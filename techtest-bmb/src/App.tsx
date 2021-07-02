@@ -3,7 +3,7 @@ import {
   BrowserRouter,
   Route,
   Switch,
-  Link,
+  Link
 } from 'react-router-dom';
 import './App.css';
 import { MovieDetails } from './components/MovieDetails';

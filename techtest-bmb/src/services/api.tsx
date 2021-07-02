@@ -1,6 +1,5 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import axios from 'axios';
-import { Api, ApiMovieResponse, Movie } from '../common/interfaces';
+import { Api, Movie } from '../common/interfaces';
 
 const URL = process.env.REACT_APP_URL;
 const API = process.env.REACT_APP_KEY;

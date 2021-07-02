@@ -6,7 +6,8 @@ export type Api = {
 
 export type MovieActions = {
     type: string;
-    movies:Movie;
+    movies?:Movie;
+    selectedMovie?:Movie;
 }
 
 export interface ApiMovieResponse {
