@@ -1,12 +1,6 @@
-export type Api = {
-    movies:{
-        fetch(): Promise<ApiMovieResponse>
-    }
-};
-
 export type MovieActions = {
     type: string;
-    movies?:Movie;
+    movies?:Movie[];
     selectedMovie?:Movie;
 }
 
@@ -43,3 +37,5 @@ export enum OriginalLanguage {
 export enum MediaType {
     Movie = 'movie',
 }
+
+
