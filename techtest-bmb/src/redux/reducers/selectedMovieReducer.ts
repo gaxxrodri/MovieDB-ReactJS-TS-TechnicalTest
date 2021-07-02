@@ -1,4 +1,4 @@
-import { Movie, MovieActions } from '../../common/interfaces';
+import { Movie, MovieActions } from '../../common/MovieInterfaces';
 import actionTypes from '../actions/actionTypes';
 
 function selectedMovieReducer(selectedMovie = [], action:MovieActions) {
