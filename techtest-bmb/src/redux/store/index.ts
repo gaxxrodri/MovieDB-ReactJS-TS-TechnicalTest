@@ -6,7 +6,7 @@ declare global {
   interface Window {
     __REDUX_DEVTOOLS_EXTENSION_COMPOSE__?: typeof compose;
   }
-}
+};
 
 function configureStore(initialState:any) {
   const composeEnhanser = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
@@ -16,6 +16,6 @@ function configureStore(initialState:any) {
     initialState,
     composeEnhanser(applyMiddleware(thunk)),
   );
-}
+};
 
 export default configureStore;
