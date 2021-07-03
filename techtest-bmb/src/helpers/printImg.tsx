@@ -1,4 +1,6 @@
-import { Movie } from '../common/interfaces';
+/* eslint-disable no-undef */
+import React from 'react';
+import { Movie } from '../common/interfaces/MovieInterfaces';
 
 const URL_IMG_BASE:string = 'https://image.tmdb.org/t/p/original/';
 

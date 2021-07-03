@@ -1,14 +1,17 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+
 // import Modal from "react-bootstrap/Modal";
 // import "bootstrap/dist/css/bootstrap.min.css";
+import { useState } from "react";
 
-// function Example() {
-//     const [smShow, setSmShow] = useState(false);
-//     const [lgShow, setLgShow] = useState(false);
+function Modal() {
+    const [smShow, setSmShow] = useState(false);
+    const [lgShow, setLgShow] = useState(false);
 
 //     return (
 //       <>
-//         <Button onClick={() => setSmShow(true)}>Small modal</Button>{' '}
-//         <Button onClick={() => setLgShow(true)}>Large modal</Button>
+//         <button onClick={() => setSmShow(true)}>Small modal</button>{' '}
+//         <button onClick={() => setLgShow(true)}>Large modal</button>
 //         <Modal
 //           size="sm"
 //           show={smShow}
@@ -40,3 +43,6 @@
 //   }
 
 //   render(<Example />);
+}
+
+  export default Modal
