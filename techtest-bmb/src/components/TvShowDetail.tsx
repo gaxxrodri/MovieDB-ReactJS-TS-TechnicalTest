@@ -7,10 +7,11 @@ import { AppState } from '../redux/reducers';
 import { loadDetailsById } from '../redux/actions/actionCreators';
 import SimilarTitles from './SimilarTitles';
 import { TitleDetails } from '../common/interfaces/TitleDetailsInterfaces';
+import { Params } from '../common/interfaces/TvShowsInterfaces';
 
 export const TvShowDetail:React.FC = () => {
   
-  const {tvShowId}:any = useParams();     //---TODO
+  const {tvShowId}:Params = useParams();
   const [currentId, setCurrentId] = useState<number>();
   const dispatch = useDispatch();
   
@@ -26,6 +27,12 @@ export const TvShowDetail:React.FC = () => {
         {titleDetails.name}
       </h1>
       <img src={`https://image.tmdb.org/t/p/original/${titleDetails.poster_path}`} alt="tv show poster" style={{height:'10%', width:'10%'}} />
+      <h4>
+        {titleDetails.vote_average}
+      </h4>
+      <p>
+        {titleDetails.overview}
+      </p>
       <div>
         <SimilarTitles titleId={+tvShowId} mediaType='tv'setCurrentId={setCurrentId}/>  
       </div>

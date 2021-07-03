@@ -5,13 +5,14 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { AppState } from '../redux/reducers';
 import { loadDetailsById } from '../redux/actions/actionCreators';
-import { Movie } from '../common/interfaces/MovieInterfaces';
+import { Movie, Params } from '../common/interfaces/MovieInterfaces';
 import SimilarTitles from './SimilarTitles';
 import { TitleDetails } from '../common/interfaces/TitleDetailsInterfaces';
 
+
 export const MovieDetails:React.FC = () => {
 
-  const {movieId}:any = useParams();    //TODO
+  const {movieId}:Params = useParams();
   const [currentId, setCurrentId] = useState<number>();
   const dispatch = useDispatch();
 
@@ -24,10 +25,16 @@ export const MovieDetails:React.FC = () => {
 
   return (
     <div>
-      <h1>
-        {titleDetails.name}
-      </h1>
+      <h2>
+        {titleDetails.title}
+      </h2>
       <img src={`https://image.tmdb.org/t/p/original/${titleDetails.poster_path}`} alt="movie poster" style={{height:'10%', width:'10%'}} />
+      <h4>
+        {titleDetails.vote_average}
+      </h4>
+      <p>
+        {titleDetails.overview}
+      </p>
       <div>
         <SimilarTitles titleId={+movieId} mediaType='movie' setCurrentId={setCurrentId} />  
       </div>

@@ -34,5 +34,6 @@ export enum OriginalLanguage {
     Ja = 'ja',
 }
 
-
-
+export interface Params{
+    movieId:string
+  }

@@ -23,7 +23,8 @@ export interface TitleDetails {
     languages: string[];
     last_air_date: Date;
     last_episode_to_air: LastEpisodeToAir;
-    name: string;
+    name?: string;
+    title?: string;
     next_episode_to_air: null;
     networks: Network[];
     number_of_episodes: number;

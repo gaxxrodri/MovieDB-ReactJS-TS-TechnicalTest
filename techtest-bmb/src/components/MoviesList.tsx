@@ -19,12 +19,13 @@ const MoviesList:React.FC = ():JSX.Element => {
     <div>
       <h1>MovieList</h1>
       <ul>
-        {movies.map(({ id, title, poster_path }:Movie) => (
+        {movies.map(({ id, title, poster_path, vote_average }:Movie) => (
           <button key={id} type="button">
             <Link to={`/movie/details/${id}`}>
               <li>
                 {title}
                 <img src={`https://image.tmdb.org/t/p/original/${poster_path}`} alt="movie poster" height="10%" width="10%" />
+                {vote_average}
               </li>
             </Link>
           </button>

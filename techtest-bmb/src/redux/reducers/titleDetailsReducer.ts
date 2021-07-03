@@ -1,11 +1,8 @@
 import { TitleDetailsActions, TitleDetails } from '../../common/interfaces/TitleDetailsInterfaces';
 import actionTypes from '../actions/actionTypes';
 
-function titleDetailsReducer(titleDetails = {}, action:TitleDetailsActions) {
-  let updateTitleDetails:TitleDetails | any = {...titleDetails};    // ----TODO
-
-
-  
+function titleDetailsReducer(titleDetails:TitleDetails, action:TitleDetailsActions) {
+  let updateTitleDetails:TitleDetails = {...titleDetails};   
   
   switch (action.type) {
     case actionTypes.LOAD_DETAILS:  

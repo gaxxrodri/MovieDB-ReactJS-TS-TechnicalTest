@@ -29,3 +29,7 @@ export type TvShowActions = {
     tvShows?:TvShow[];
     selectedTvShow?:TvShow;
 }
+
+export interface Params{
+    tvShowId:string
+  }

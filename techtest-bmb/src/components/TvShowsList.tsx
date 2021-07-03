@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import { TvShow } from '../common/interfaces/TvShowsInterfaces';
 import { loadTvShows } from '../redux/actions/actionCreators';
 import { AppState } from '../redux/reducers';
+import Carousel from '../helpers/carousel/Carousel';
 
 const TvShowsList:React.FC = ():JSX.Element => {
   const tvShows:TvShow[] = useSelector((store: AppState) => store.tvShows);
@@ -18,13 +19,15 @@ const TvShowsList:React.FC = ():JSX.Element => {
   return (
     <div>
       <h1>TvShows List</h1>
+      <Carousel/>
       <ul>
-        {tvShows.map(({ id, name, poster_path }:TvShow) => (
+        {tvShows.map(({ id, name, poster_path, vote_average}:TvShow) => (
           <button key={id} type="button">
             <Link to={`/tv/details/${id}`}>
               <li>
                 {name}
                 <img src={`https://image.tmdb.org/t/p/original/${poster_path}`} alt="tv show poster" height="10%" width="10%" />
+                {vote_average}
               </li>
             </Link>
           </button>
