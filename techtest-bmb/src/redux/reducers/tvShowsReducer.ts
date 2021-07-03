@@ -1,4 +1,4 @@
-import { TvShow, TvShowActions } from '../../common/TvShowsInterfaces';
+import { TvShow, TvShowActions } from '../../common/interfaces/TvShowsInterfaces';
 import actionTypes from '../actions/actionTypes';
 
 function tvShowsReducer(tvShows = [], action:TvShowActions) {

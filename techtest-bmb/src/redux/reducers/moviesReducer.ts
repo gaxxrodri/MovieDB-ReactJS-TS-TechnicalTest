@@ -1,4 +1,4 @@
-import { Movie, MovieActions } from '../../common/MovieInterfaces';
+import { Movie, MovieActions } from '../../common/interfaces/MovieInterfaces';
 import actionTypes from '../actions/actionTypes';
 
 function moviesReducer(movies = [], action:MovieActions) {

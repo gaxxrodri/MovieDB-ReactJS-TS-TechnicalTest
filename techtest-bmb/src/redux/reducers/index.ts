@@ -1,14 +1,14 @@
 import { combineReducers } from 'redux';
 import moviesReducer from './moviesReducer';
-import selectedMovieReducer from './selectedMovieReducer';
-import selectedTvShowReducer from './selectedTvShowReducer';
+import similarTitlesReducer from './similarTitlesReducer';
 import tvShowsReducer from './tvShowsReducer';
+import titleDetailsReducer from './titleDetailsReducer';
 
 const rootReducer = combineReducers({
   movies: moviesReducer,
-  selectedMovie: selectedMovieReducer,
   tvShows: tvShowsReducer,
-  selectedTvShow: selectedTvShowReducer,
+  similarTitles: similarTitlesReducer,
+  titleDetails: titleDetailsReducer,
 });
 
 export type AppState = ReturnType<typeof rootReducer>
