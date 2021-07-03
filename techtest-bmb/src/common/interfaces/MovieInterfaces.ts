@@ -5,10 +5,10 @@ export type MovieActions = {
 }
 
 export interface ApiMovieResponse {
-    page: number;
-    results: Movie[];
-    total_pages: number;
-    total_results: number;
+        page: number;
+        results: Movie[];
+        total_pages: number;
+        total_results: number;
 }
 
 export interface Movie {
@@ -16,17 +16,17 @@ export interface Movie {
     backdrop_path: string;
     genre_ids: number[];
     id: number;
+    media_type: string;
+    release_date: Date;
     original_language: OriginalLanguage;
     original_title: string;
+    overview: string;
     poster_path: string;
     popularity: number;
-    overview: string;
     title: string;
-    release_date: Date;
     video: boolean;
     vote_average: number;
     vote_count: number;
-    media_type: MediaType;
 }
 
 export enum OriginalLanguage {
@@ -34,8 +34,5 @@ export enum OriginalLanguage {
     Ja = 'ja',
 }
 
-export enum MediaType {
-    Movie = 'movie',
-}
 
 

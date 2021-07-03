@@ -19,12 +19,10 @@ export interface TvShow {
     vote_average: number;
     id: number;
     popularity: number;
-    media_type: MediaType;
+    media_type: string;
 }
 
-export enum MediaType {
-    Tv = "tv",
-}
+
 
 export type TvShowActions = {
     type: string;

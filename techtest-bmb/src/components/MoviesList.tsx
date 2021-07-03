@@ -3,12 +3,12 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { Movie } from '../common/interfaces';
+import { Movie } from '../common/interfaces/MovieInterfaces';
 import { loadMovies } from '../redux/actions/actionCreators';
 import { AppState } from '../redux/reducers';
 
-const MoviesList = ():JSX.Element => {
-  const movies = useSelector((store: AppState) => store.movies);
+const MoviesList:React.FC = ():JSX.Element => {
+  const movies:Movie[] = useSelector((store: AppState) => store.movies);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -21,19 +21,14 @@ const MoviesList = ():JSX.Element => {
       <ul>
         {movies.map(({ id, title, poster_path }:Movie) => (
           <button key={id} type="button">
-            <Link to={`/details/${id}`}>
+            <Link to={`/movie/details/${id}`}>
               <li>
                 {title}
                 <img src={`https://image.tmdb.org/t/p/original/${poster_path}`} alt="movie poster" height="10%" width="10%" />
-
               </li>
             </Link>
           </button>
         ))}
-
-        {/* {printImg(movies)} */}
-        {/* {printMovies(movies)} */}
-        {/* {printMovies(movies, setSelectedMovie)} */}
       </ul>
     </div>
   );
