@@ -1,28 +1,36 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import { Movie } from '../common/interfaces';
-import { getMovieById } from '../redux/actions/actionCreators';
 import { AppState } from '../redux/reducers';
+import { loadDetailsById } from '../redux/actions/actionCreators';
+import { Movie } from '../common/interfaces/MovieInterfaces';
+import SimilarTitles from './SimilarTitles';
+import { TitleDetails } from '../common/interfaces/TitleDetailsInterfaces';
 
-export const MovieDetails = () => {
-  const { movieId }:any = useParams();
+export const MovieDetails:React.FC = () => {
+
+  const {movieId}:any = useParams();    //TODO
+  const [currentId, setCurrentId] = useState<number>();
   const dispatch = useDispatch();
 
-  const movies = useSelector((store: AppState) => store.movies);
-  const selectedMovie:Movie = useSelector((store: AppState) => store.selectedMovie);
+
+  const titleDetails:TitleDetails = useSelector((store: AppState) => store.titleDetails);
 
   useEffect(() => {
-    dispatch(getMovieById(+movieId, movies));
-  }, []);
+    dispatch(loadDetailsById(+movieId, 'movie'));
+  }, [currentId]);
 
   return (
     <div>
       <h1>
-        {selectedMovie.title}
+        {titleDetails.name}
       </h1>
-      <img src={`https://image.tmdb.org/t/p/original/${selectedMovie.poster_path}`} alt="movie poster" height="50%" width="50%" />
+      <img src={`https://image.tmdb.org/t/p/original/${titleDetails.poster_path}`} alt="movie poster" style={{height:'10%', width:'10%'}} />
+      <div>
+        <SimilarTitles titleId={+movieId} mediaType='movie' setCurrentId={setCurrentId} />  
+      </div>
     </div>
   );
 };

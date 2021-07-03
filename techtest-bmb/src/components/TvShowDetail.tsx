@@ -1,28 +1,34 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { AppState } from '../redux/reducers';
-import { TvShow } from '../common/TvShowsInterfaces';
-import { getTvShowById } from '../redux/actions/actionCreators';
+import { loadDetailsById } from '../redux/actions/actionCreators';
+import SimilarTitles from './SimilarTitles';
+import { TitleDetails } from '../common/interfaces/TitleDetailsInterfaces';
 
-export const TvShowDetail = () => {
-  const {tvShowId}:any = useParams();
+export const TvShowDetail:React.FC = () => {
+  
+  const {tvShowId}:any = useParams();     //---TODO
+  const [currentId, setCurrentId] = useState<number>();
   const dispatch = useDispatch();
-
-  const tvShows = useSelector((store: AppState) => store.tvShows);
-  const selectedTvShow:TvShow = useSelector((store: AppState) => store.selectedTvShow);
-
+  
+  const titleDetails:TitleDetails = useSelector((store: AppState) => store.titleDetails);
+  
   useEffect(() => {
-    dispatch(getTvShowById(+tvShowId, tvShows));
-  }, []);
+    dispatch(loadDetailsById(+tvShowId, 'tv'));
+  }, [currentId]); 
 
   return (
     <div>
       <h1>
-        {selectedTvShow.name}
+        {titleDetails.name}
       </h1>
-      <img src={`https://image.tmdb.org/t/p/original/${selectedTvShow.poster_path}`} alt="movie poster" height="50%" width="50%" />
+      <img src={`https://image.tmdb.org/t/p/original/${titleDetails.poster_path}`} alt="tv show poster" style={{height:'10%', width:'10%'}} />
+      <div>
+        <SimilarTitles titleId={+tvShowId} mediaType='tv'setCurrentId={setCurrentId}/>  
+      </div>
     </div>
   );
 };
