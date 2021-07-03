@@ -12,8 +12,8 @@ const Header = () => {
         <Link to="/" >
          Movies
         </Link>
-        <Link to="/tvshows">
-            Tv Shows
+        <Link to="/tv">
+          Tv Shows
         </Link>
       </div>
       </header>
