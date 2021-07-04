@@ -11,8 +11,7 @@ interface SimilarTitlesProps {
   titleId: number,
   mediaType: string,
   setCurrentId: React.Dispatch<React.SetStateAction<number | undefined>>
-}
-
+};
 
 const SimilarTitles = ({titleId, mediaType, setCurrentId}:SimilarTitlesProps):JSX.Element => {         
 
