@@ -13,7 +13,7 @@
   border: 2px solid lightcyan;
   text-decoration: none;
 }
-.nav-container:hover {
+.nav-container:hover { 
   opacity: 1;
 }
 .nav-container__buttonsLinks {
