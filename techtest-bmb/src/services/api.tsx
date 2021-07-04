@@ -5,11 +5,6 @@ import { ApiSimilarTitlesResponse } from '../common/interfaces/SimilarTitlesInte
 import { ApiTvShowResponse } from '../common/interfaces/TvShowsInterfaces';
 import { TitleDetails } from '../common/interfaces/TitleDetailsInterfaces';
 
-// const URL_MOVIES = process.env.REACT_APP_URL_MOVIES;
-// const URL_TVSHOWS = process.env.REACT_APP_URL_TVSHOWS;
-// const URL_SIMILAR_TITLES = process.env.REACT_APP_URL_SIMILAR_TITLES;
-// const URL_TITLES = process.env.REACT_APP_URL_TITLES;
-
 const URL_BASE_MOVIEDB = process.env.REACT_APP_URL_BASE_MOVIEDB;
 const URL_TRENDING_MOVIES = `${URL_BASE_MOVIEDB}/trending/movie/week`;
 const URL_TRENDING_TVSHOWS = `${URL_BASE_MOVIEDB}/trending/tv/week`;
