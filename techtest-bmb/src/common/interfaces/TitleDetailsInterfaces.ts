@@ -12,7 +12,7 @@ export interface ApiFullDetailsResponse {
 
 
 export interface TitleDetails {
-    backdrop_path: null;
+    backdrop_path: string | null;
     created_by: any[];
     episode_run_time: number[];
     first_air_date: Date;
@@ -24,8 +24,7 @@ export interface TitleDetails {
     last_air_date: Date;
     last_episode_to_air: LastEpisodeToAir;
     name?: string;
-    title?: string;
-    next_episode_to_air: null;
+    next_episode_to_air: NextEpisodeToAir;
     networks: Network[];
     number_of_episodes: number;
     number_of_seasons: number;
@@ -37,10 +36,13 @@ export interface TitleDetails {
     poster_path: string;
     production_companies: Network[];
     production_countries: any[];
+    runtime?:number;
+    release_date:Date;
     seasons: Season[];
     spoken_languages: SpokenLanguage[];
     status: string;
     tagline: string;
+    title?: string;
     type: string;
     vote_average: number;
     vote_count: number;
@@ -60,6 +62,19 @@ export interface LastEpisodeToAir {
     production_code: string;
     season_number: number;
     still_path:string;
+    vote_average: number;
+    vote_count: number;
+}
+
+export interface NextEpisodeToAir {
+    air_date: Date;
+    episode_number: number;
+    id: number;
+    name: string;
+    overview: string;
+    production_code: string;
+    season_number: number;
+    still_path: null;
     vote_average: number;
     vote_count: number;
 }
