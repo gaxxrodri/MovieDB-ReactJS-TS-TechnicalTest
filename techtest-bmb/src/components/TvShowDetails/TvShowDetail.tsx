@@ -17,7 +17,7 @@ export const TvShowDetail:React.FC = () => {
   
   useEffect(() => {
     dispatch(loadDetailsById(+tvShowId, 'tv'));
-  }, [currentId, tvShowId, dispatch]); 
+  }, [currentId, tvShowId, dispatch]);
 
   return (
     <section className="details-container">
