@@ -1,7 +1,7 @@
-.header-container {
+.nav-container {
   background-color: #141414;
   opacity: 0.95;
-  min-height: 7vh;
+  min-height: 10vh;
   min-width: 100vw;
   display: flex;
   flex-direction: row;
@@ -10,22 +10,24 @@
   font-size: calc(10px + 2vmin);
   position: fixed;
   top: 0;
-  border: 2px solid lightcoral;
+  border: 2px solid lightcyan;
   text-decoration: none;
 }
-.header-container:hover {
+.nav-container:hover {
   opacity: 1;
 }
-.header-container__buttonsLinks {
+.nav-container__buttonsLinks {
   margin: 0 20px;
   opacity: 0.5;
   min-height: 4vh;
   min-width: 6vw;
   border-radius: 4px;
-  text-transform: uppercase;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
-.header-container__buttonsLinks:hover {
+.nav-container__buttonsLinks:hover {
   opacity: 1;
 }
 
@@ -36,5 +38,8 @@ a {
 a:hover {
   color: white;
   text-shadow: 0px 0px 40px white;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }/*# sourceMappingURL=NavBar.css.map */

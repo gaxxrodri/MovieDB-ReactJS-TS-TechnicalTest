@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.TvShowsList-container {
+  margin-top: 13vh;
+  width: 100%;
+  height: auto;
+  z-index: 0;
+}
+.TvShowsList-container__title {
+  font-size: 20px;
+  color: white;
+  justify-self: center;
+  display: block;
+}
+.TvShowsList-container .list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  list-style-type: none;
+}
+.TvShowsList-container .list .list-item {
+  border-radius: 20px;
+  width: 16vw;
+  height: 55vh;
+  margin: 20px;
+  transition: transform 0.1s;
+  box-shadow: rgba(255, 255, 255, 0.4) 0px 0px 20px 0px, rgba(236, 232, 232, 0.1) 0px 0px 0px 0px, rgba(230, 222, 222, 0.05) 0px 0px 0px 0px inset;
+}
+.TvShowsList-container .list .list-item:hover {
+  box-shadow: rgba(255, 255, 255, 0.7) 0px 0px 40px 0px, rgba(236, 232, 232, 0.1) 0px 0px 0px 0px, rgba(230, 222, 222, 0.05) 0px 0px 0px 0px inset;
+  transform: scale(1.05);
+}
+.TvShowsList-container .list .list-item__img {
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  width: 16vw;
+  height: 44vh;
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(black), to(rgba(0, 0, 0, 0)));
+  mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0.4));
+}
+.TvShowsList-container .list .list-item__title {
+  color: white;
+  margin: 10px 10px 0px 10px;
+}
+.TvShowsList-container .list .list-item__rating {
+  font-size: 10px;
+  display: inline;
+  opacity: 0.8;
+  margin-top: 7px;
+}/*# sourceMappingURL=TvShowsList.css.map */

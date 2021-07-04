@@ -1,7 +1,7 @@
-.header-container {
+.nav-container {
     background-color: rgba(20,20,20);
-    opacity: 0.95;
-    min-height: 7vh;
+    opacity: 0.80;
+    min-height: 10vh;
     min-width: 100vw;
     display: flex;
     flex-direction: row;
@@ -10,28 +10,29 @@
     font-size: calc(10px + 2vmin);
     position: fixed;
     top: 0;
-    border: 2px solid lightcoral;
     text-decoration: none;
+    z-index: 5;
 
     &:hover{
         opacity: 1;
     }
-    
+
+    .logo{
+        
+        height: 10%;
+        width: 10%;
+        position: relative;
+        right: 485px;
+    }
+
     &__buttonsLinks{
-        // display:inline;
-        // text-decoration: none;
-        // color: rgba(255, 255, 255, 0.8);
-        // background-color: lightcoral;
         margin: 0 20px;
-        opacity: 0.5;
+        opacity: 0.7;
         min-height: 4vh;
         min-width: 6vw;
         border-radius: 4px;
-        text-transform: uppercase;
-        -moz-transition: all 0.2s ease-in;
-        -o-transition: all 0.2s ease-in;
-        -webkit-transition: all 0.2s ease-in;
-        transition: all 0.2s ease-in;
+        right: 90px;
+        position:relative;
         &:hover {
             opacity: 1;
           }
@@ -41,13 +42,17 @@
 a {
     text-decoration: none;
     color:white;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.1s ease-in;
 
     &:hover {
         color: white;
         text-shadow:0px 0px 40px white;
-        -moz-transition: all 0.2s ease-in;
-        -o-transition: all 0.2s ease-in;
-        -webkit-transition: all 0.2s ease-in;
-        transition: all 0.2s ease-in;
+        -moz-transition: all 0.1s ease-in;
+        -o-transition: all 0.1s ease-in;
+        -webkit-transition: all 0.1s ease-in;
+        transition: all 0.1s ease-in;
     }
 }

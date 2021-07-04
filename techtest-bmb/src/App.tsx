@@ -7,12 +7,12 @@ import {
   Switch
 } from 'react-router-dom';
 import './App.css';
-import NavBar from './components/navBar/NavBar';
-import { MovieDetails } from './components/MovieDetails';
-import MoviesList from './components/moviesList/MoviesList';
-import NotFound from './components/NotFound';
-import { TvShowDetail } from './components/TvShowDetail';
-import TvShowsList from './components/TvShowsList';
+import NavBar from './components/NavBar/NavBar';
+import { MovieDetails } from './components/MovieDetails/MovieDetails';
+import MoviesList from './components/MoviesList/MoviesList';
+import NotFound from './components/NotFound/NotFound';
+import { TvShowDetail } from './components/TvShowDetails/TvShowDetail';
+import TvShowsList from './components/TvShowsList/TvShowsList';
 import store from './redux/store';
 import './App.css';
 
@@ -21,7 +21,6 @@ function App() {
     <div className="App">
       <Provider store={store({})}>
         <BrowserRouter>
-          <main className="main-container">
             <NavBar/>
             <Switch>
               <Route path="/" exact component={MoviesList} />
@@ -30,7 +29,6 @@ function App() {
               <Route path="/tv/details/:tvShowId" exact component={TvShowDetail} />
               <Route component={NotFound} />
             </Switch>
-          </main>
         </BrowserRouter>
       </Provider>
     </div>
