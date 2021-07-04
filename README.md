@@ -1,5 +1,6 @@
-[movieDBapp](https://i.ibb.co/p4BVmZ8/main.png)
- 
+<p align="center"> <img  src="https://i.ibb.co/vd2pZ1h/main.png" width="70%" height="70%">
+     </p>
+  
  
 # MoviesDB web page
 
