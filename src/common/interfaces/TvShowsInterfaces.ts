@@ -6,7 +6,7 @@ export interface ApiTvShowResponse {
 }
 
 export interface TvShow {
-    first_air_date:  Date;
+    first_air_date: Date;
     name: string;
     overview: string;
     original_name: string;
@@ -21,8 +21,6 @@ export interface TvShow {
     popularity: number;
     media_type: string;
 }
-
-
 
 export type TvShowActions = {
     type: string;

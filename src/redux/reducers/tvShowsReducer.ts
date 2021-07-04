@@ -6,7 +6,7 @@ function tvShowsReducer(tvShows = [], action:TvShowActions) {
 
   switch (action.type) {
     case actionTypes.LOAD_TVSHOWS:
-        updateTvShows = action.tvShows;
+      updateTvShows = action.tvShows;
       break;
     case actionTypes.LOAD_TVSHOWS_ERROR:
       break;

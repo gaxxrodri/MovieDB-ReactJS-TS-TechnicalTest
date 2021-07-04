@@ -31,24 +31,22 @@ export const loadTvShows = () => async (dispatch: Dispatch) => {
 };
 
 export const loadDetailsById = (titleId: number, mediaType: string) => async (dispatch: Dispatch) => {
-
-    try {
-      const  titleDetails  = await api.details.fetch(titleId, mediaType);
-      dispatch({
-        type: actionTypes.LOAD_DETAILS,
-        titleDetails ,
-      });
-    } catch (error) {
-      dispatch({
-        type: actionTypes.LOAD_DETAILS_ERROR,
-      });
-    }
-  };
+  try {
+    const titleDetails = await api.details.fetch(titleId, mediaType);
+    dispatch({
+      type: actionTypes.LOAD_DETAILS,
+      titleDetails,
+    });
+  } catch (error) {
+    dispatch({
+      type: actionTypes.LOAD_DETAILS_ERROR,
+    });
+  }
+};
 
 export const loadSimilarTitles = (titleId:number, mediaType:string) => async (dispatch: Dispatch) => {
-  
   try {
-    const similarTitles = await api.similarTitles.fetch(titleId,mediaType);
+    const similarTitles = await api.similarTitles.fetch(titleId, mediaType);
     dispatch({
       type: actionTypes.LOAD_SIMILAR_TITLES,
       similarTitles,

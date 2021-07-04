@@ -10,7 +10,6 @@ export interface ApiFullDetailsResponse {
     total_results: number;
 }
 
-
 export interface TitleDetails {
     backdrop_path: string | null;
     created_by: any[];
@@ -101,4 +100,3 @@ export interface SpokenLanguage {
     iso_639_1: string;
     name: string;
 }
-

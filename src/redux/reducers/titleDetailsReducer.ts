@@ -2,10 +2,10 @@ import { TitleDetailsActions, TitleDetails } from '../../common/interfaces/Title
 import actionTypes from '../actions/actionTypes';
 
 function titleDetailsReducer(titleDetails:TitleDetails, action:TitleDetailsActions) {
-  let updateTitleDetails:TitleDetails = {...titleDetails};   
-  
+  let updateTitleDetails:TitleDetails = { ...titleDetails };
+
   switch (action.type) {
-    case actionTypes.LOAD_DETAILS:  
+    case actionTypes.LOAD_DETAILS:
       updateTitleDetails = action.titleDetails;
       break;
     case actionTypes.LOAD_DETAILS_ERROR:

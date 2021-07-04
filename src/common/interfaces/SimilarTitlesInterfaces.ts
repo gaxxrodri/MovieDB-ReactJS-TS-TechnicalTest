@@ -10,7 +10,6 @@ export interface ApiSimilarTitlesResponse {
         total_results: number;
 }
 
-
 export interface SimilarTitle {
     adult: boolean;
     backdrop_path: string;
@@ -29,7 +28,5 @@ export interface SimilarTitle {
 }
 
 export enum OriginalLanguage {
-    En = "en",
+    En = 'en',
 }
-
-

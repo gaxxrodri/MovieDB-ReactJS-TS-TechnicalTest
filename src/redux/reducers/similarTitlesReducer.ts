@@ -6,7 +6,7 @@ function similarTitlesReducer(similarTitles = [], action:SimilarTitlesActions) {
 
   switch (action.type) {
     case actionTypes.LOAD_SIMILAR_TITLES:
-        updateSimilarTitles = action.similarTitles;
+      updateSimilarTitles = action.similarTitles;
       break;
     case actionTypes.LOAD_SIMILAR_TITLES_ERROR:
       break;

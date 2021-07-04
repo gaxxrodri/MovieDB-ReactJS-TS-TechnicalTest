@@ -1,6 +1,6 @@
-import { Movie } from "./MovieInterfaces";
-import { SimilarTitle } from "./SimilarTitlesInterfaces";
-import { TitleDetails } from "./TitleDetailsInterfaces"
+import { Movie } from './MovieInterfaces';
+import { SimilarTitle } from './SimilarTitlesInterfaces';
+import { TitleDetails } from './TitleDetailsInterfaces';
 import { TvShow } from './TvShowsInterfaces';
 
 export type Api = {

@@ -8,13 +8,10 @@ import SimilarTitles from '../SimilarTitles/SimilarTitles';
 import { TitleDetails } from '../../common/interfaces/TitleDetailsInterfaces';
 import './MovieDetails.css';
 
-
 export const MovieDetails:React.FC = () => {
-
-  const {movieId}:Params = useParams();
+  const { movieId }:Params = useParams();
   const [currentId, setCurrentId] = useState<number>();
   const dispatch = useDispatch();
-
 
   const titleDetails:TitleDetails = useSelector((store: AppState) => store.titleDetails);
 
@@ -34,20 +31,25 @@ export const MovieDetails:React.FC = () => {
             {titleDetails.overview}
           </p>
           <div className="info-container__extra-info">
-              <p>
-                Ranking: {titleDetails.vote_average} / 10
-              </p>
-              <p>
-                Duration: {titleDetails.runtime} min
-              </p>
-              <p >
-                Release date: {titleDetails.release_date} 
-              </p>
+            <p>
+              Ranking:
+              {titleDetails.vote_average}
+              / 10
+            </p>
+            <p>
+              Duration:
+              {titleDetails.runtime}
+              min
+            </p>
+            <p>
+              Release date:
+              {titleDetails.release_date}
+            </p>
           </div>
         </div>
       </div>
       <div className="similar-titles-container">
-        <SimilarTitles titleId={+movieId} mediaType='movie' setCurrentId={setCurrentId} />  
+        <SimilarTitles titleId={+movieId} mediaType="movie" setCurrentId={setCurrentId} />
       </div>
     </section>
   );
