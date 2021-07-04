@@ -3,33 +3,54 @@
   padding: 0;
   box-sizing: border-box;
 }
-* .movieList-container {
-  border: 5px solid green;
-  margin-top: 7vh;
+
+.movieList-container {
+  margin-top: 13vh;
+  width: 100%;
+  height: auto;
+  z-index: 0;
+}
+.movieList-container__title {
+  font-size: 20px;
+  color: white;
+  justify-self: center;
+  display: block;
+}
+.movieList-container .list {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: auto;
+  align-items: flex-start;
+  list-style-type: none;
 }
-* .movieList-container__title {
-  font-size: 20px;
-  color: red;
-  justify-self: center;
-  display: block;
-}
-* .movieList-container__list-item {
-  width: 16vw;
-  height: 60vh;
-  border: 3px solid yellow;
-  margin: 20px;
-  box-shadow: rgba(0, 0, 0, 0.7) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+.movieList-container .list .list-item {
   border-radius: 20px;
+  width: 16vw;
+  height: 55vh;
+  margin: 20px;
+  transition: transform 0.1s;
+  box-shadow: rgba(255, 255, 255, 0.4) 0px 0px 20px 0px, rgba(236, 232, 232, 0.1) 0px 0px 0px 0px, rgba(230, 222, 222, 0.05) 0px 0px 0px 0px inset;
 }
-
-img {
-  -webkit-mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0.4));
-          mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0.4));
+.movieList-container .list .list-item:hover {
+  box-shadow: rgba(255, 255, 255, 0.7) 0px 0px 40px 0px, rgba(236, 232, 232, 0.1) 0px 0px 0px 0px, rgba(230, 222, 222, 0.05) 0px 0px 0px 0px inset;
+  transform: scale(1.05);
+}
+.movieList-container .list .list-item__img {
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  width: 16vw;
+  height: 44vh;
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(black), to(rgba(0, 0, 0, 0)));
+  mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0.4));
+}
+.movieList-container .list .list-item__title {
+  color: white;
+  margin: 10px 10px 0px 10px;
+}
+.movieList-container .list .list-item__rating {
+  font-size: 10px;
+  display: inline;
+  opacity: 0.8;
+  margin-top: 7px;
 }/*# sourceMappingURL=MoviesList.css.map */
