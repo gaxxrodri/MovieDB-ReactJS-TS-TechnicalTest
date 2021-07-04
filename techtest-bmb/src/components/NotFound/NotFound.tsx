@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './NotFound.css';
 
-
 const NotFound = () => (
   <section className="notFound-container">
     <h1>Error - 404</h1>
