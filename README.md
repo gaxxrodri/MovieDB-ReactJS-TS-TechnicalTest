@@ -4,7 +4,7 @@
  
 # MoviesDB web page
 
-A technical test web page, made in ReactJS and TS consuming an API from themoviedb.org
+A technical test web page, made in ReactJS and TS, using Redux and consuming an API from themoviedb.org
  
  
 ## Deploy
