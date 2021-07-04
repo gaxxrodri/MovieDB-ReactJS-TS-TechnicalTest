@@ -9,8 +9,6 @@ import { TitleDetails } from '../../common/interfaces/TitleDetailsInterfaces';
 import './MovieDetails.css';
 
 
-
-
 export const MovieDetails:React.FC = () => {
 
   const {movieId}:Params = useParams();

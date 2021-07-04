@@ -31,7 +31,7 @@
   justify-content: space-around;
   display: flex;
   flex-direction: column;
-  border-radius: inherit;
+  border-radius: inherit; 
 }
 .details-container .item .info-container__title {
   color: white;
