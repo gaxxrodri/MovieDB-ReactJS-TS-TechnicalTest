@@ -32,18 +32,13 @@ export const MovieDetails:React.FC = () => {
           </p>
           <div className="info-container__extra-info">
             <p>
-              Ranking:
-              {titleDetails.vote_average}
-              / 10
+              Ranking: {titleDetails.vote_average} / 10
             </p>
             <p>
-              Duration:
-              {titleDetails.runtime}
-              min
+              Duration: {titleDetails.runtime} min
             </p>
             <p>
-              Release date:
-              {titleDetails.release_date}
+              Release date: {titleDetails.release_date}
             </p>
           </div>
         </div>

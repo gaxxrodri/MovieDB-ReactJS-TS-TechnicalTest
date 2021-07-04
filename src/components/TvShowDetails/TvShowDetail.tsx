@@ -31,17 +31,13 @@ export const TvShowDetail:React.FC = () => {
           </p>
           <div className="info-container__extra-info">
             <p>
-              Ranking:
-              {titleDetails.vote_average}
-              / 10
+              Ranking: {titleDetails.vote_average} / 10
             </p>
             <p>
-              Seasons:
-              {titleDetails.number_of_seasons}
+              Seasons: {titleDetails.number_of_seasons}
             </p>
             <p>
-              Next episode release:
-              {titleDetails.next_episode_to_air?.air_date}
+              Next episode release: {titleDetails.next_episode_to_air?.air_date}
             </p>
           </div>
         </div>
