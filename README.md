@@ -1,5 +1,5 @@
-![movieDB app](https://ibb.co/frz6ct5)
-
+<!-- ![movieDB app](https://ibb.co/frz6ct5)
+ -->
 
 
 # Getting Started with Create React App
