@@ -14,6 +14,6 @@ export type Api = {
         fetch(titleId:number, mediaType:string):Promise<TitleDetails | Error>
     },
     similarTitles: {
-        fetch(titleId:any, mediaType:string):Promise<SimilarTitle[] | Error>
+        fetch(titleId:number, mediaType:string):Promise<SimilarTitle[] | Error>
     }
 };
