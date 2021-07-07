@@ -26,7 +26,7 @@ function App() {
             <Route path="/movie/details/:movieId" exact component={MovieDetails} />
             <Route path="/tv" exact component={TvShowsList} />
             <Route path="/tv/details/:tvShowId" exact component={TvShowDetail} />
-            <Route component={NotFound} />
+            <Route path="" component={NotFound} />
           </Switch>
         </BrowserRouter>
       </Provider>

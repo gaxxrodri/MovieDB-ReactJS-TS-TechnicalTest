@@ -2,7 +2,7 @@ import React from 'react';
 import { render as rtlRender } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
-import configureStore from '../redux/store/store';
+import configureStore from '../redux/store/index';
 
 function render(
   ui,
