@@ -1,5 +1,5 @@
 <p align="center"> <img  src="https://i.ibb.co/vd2pZ1h/main.png" width="70%" height="70%">
-     </p>
+</p>
   
  
 # MoviesDB web page
