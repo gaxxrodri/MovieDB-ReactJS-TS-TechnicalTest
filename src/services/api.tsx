@@ -15,8 +15,11 @@ export const api:Api = {
     async fetch() {
       const url_movies_endpoint = `${URL_TRENDING_MOVIES}?api_key=${KEY}`;
       try {
-        const { data } = await axios.get<ApiMovieResponse>(url_movies_endpoint);
-        const movies = data.results;
+        const res = await axios.get<ApiMovieResponse>(url_movies_endpoint);
+        if(!res.data) {
+          throw new Error('No data');
+        }
+        const movies = res.data.results;
         return movies;
       } catch (error) {
         throw new Error(error);
